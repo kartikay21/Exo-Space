@@ -1,0 +1,385 @@
+	body{
+		/*set background image*/
+	background-image:url("images/background.jpg");
+	/*cover all background*/
+	background-size:auto;
+		}
+
+		
+		p{
+			
+			margin-left:101%;
+			margin-top:2%;
+		}
+		h3{
+			color:green;
+			float:right;
+			margin-top:2%;
+		}
+		a{
+			margin-top:-5%;
+			margin-left:-6%;
+			color:blue;
+		}
+
+
+
+/*          EARTH      */
+
+
+
+/*satart earth class*/
+.earth {
+	/*width of earth*/
+  width: 200px;
+  /*height of earth*/
+  height: 200px;
+  /*fixed the position*/
+  position: absolute;
+  
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /*hidden ovelflow image ahow only in circule*/
+  overflow: hidden;
+  /*a cube convert in a circule*/
+  border-radius: 50%;
+  
+  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+}
+
+.earth:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -20px -20px 50px 2px #000 inset;
+  border-radius: 50%;
+}
+/*earth > div image is overlap on circle div*/
+.earth > div {
+	
+  width: 200%;
+  height: 100%;
+  /*rotated a image on circle infinite time and linear*/
+  animation: earth-spin 20s linear alternate infinite;
+  /*attached a earth image*/
+  background-image: url(images/earth1.jpg);
+  /*cover circle by image*/
+  background-size: cover;
+}
+@keyframes earth-spin {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+
+
+
+
+/*        KEPLER          */
+
+
+
+.kepler > div {
+	
+	margin-top: 5%;
+  width: 9%;
+  height: 15.5%;
+ 
+  animation: kepspin 1s linear alternate infinite;
+  background-image: url(images/kepler.jpg);
+
+  background-size: cover;
+}
+@keyframes kepspin {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.textkepler{
+	
+	margin-top:-4%;
+	margin-left:10%;
+	
+}
+.textkepler .hoverkepler {
+  visibility: hidden;
+  width: 350px;
+  background-color: rgba(255,0,255,0.2);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  
+  position: absolute;
+  z-index: 1;
+}
+.textkepler:hover .hoverkepler {
+  visibility: visible;
+}
+
+/*                             EPIC                                     */
+
+.epic {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top:25%;
+	margin-left:10%;
+  
+  
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+}
+
+
+
+.epic > div {
+	
+  width: 200%;
+  height: 100%;
+  animation: epicspin 10s linear alternate infinite;
+  background-image: url(images/epic.jpg);
+ 
+  background-size: cover;
+}
+@keyframes epicspin {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.epic:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -20px -20px 50px 2px #000 inset;
+  border-radius: 50%;
+}
+
+
+.containerepic {
+    position: relative;
+    width: 50%;
+}
+
+
+.textepic{
+	
+	margin-top:-1%;
+	margin-left:70%;
+}
+.textepic .hoverepic {
+  visibility: hidden;
+  width: 350px;
+  background-color: rgba(128,0,0,0.2);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  
+  position: absolute;
+  z-index: 1;
+}
+.textepic:hover .hoverepic {
+  visibility: visible;
+}
+
+
+/*                                   QATAR                                    */
+
+
+
+
+
+
+.solar-system {
+  
+  width: 500px;
+  height: 300px;
+ 
+  overflow: hidden;
+}
+
+
+
+
+
+
+.orbit {
+  border: 1px dashed #666;
+}
+ .orbit, .orbit + div, .orbit + div > div {
+	position: absolute;
+}
+
+ .orbit, .orbit + div {
+	top: 50%;
+	left: 50%;
+}
+.orbit + div > div {
+	top: 0;
+  left: 50%;
+}
+
+.orbit, .orbit + div div {
+	border-radius: 50%;
+}
+.mercury {
+	float : right;
+
+   margin-left: 30%; 
+   position : relative;
+ /* margin-left: -13.5px; */
+  height: 100px;
+  width: 100px;
+  background-image : url(images/qatar.jpg);
+  background-size : cover;
+  /* box-shadow: 0 0 34px #3a4385; */
+}
+
+.mercury-orbit, .mercury-spin {
+	  position : relative;
+float : right;
+  width: 100px;
+  height: 70px;
+ /* margin-left: -140px; */
+  margin-top: 10%; 
+margin-left: 22%;   
+}
+@keyframes spin-right {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.mercury-spin {
+  animation: spin-right 10s  infinite;
+}
+
+
+
+.containerqatar {
+    position: relative;
+    width: 50%;
+}
+
+
+.textqatar{
+	
+	margin-top:7%;
+	margin-left:23%;
+	
+}
+.textqatar .hoverqatar {
+  visibility: hidden;
+  width: 350px;
+  background-color: rgba(0,255,255,0.2);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  
+  position: absolute;
+  z-index: 1;
+}
+.textqatar:hover .hoverqatar {
+  visibility: visible;
+}
+
+
+
+/*                                    COROT                                   */
+
+
+.corot {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: -5%;
+	margin-left:65%;
+  
+  
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+}
+
+
+
+.corot > div {
+	
+  width: 200%;
+  height: 100%;
+  animation: corot-spin 5s linear alternate infinite;
+  background-image: url(images/corot.jpeg);
+ 
+  background-size: cover;
+}
+@keyframes corot-spin {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.corot:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -10px -20px 50px 2px #000 inset;
+  border-radius: 50%;
+}
+
+.containercorot {
+    position: relative;
+    width: 50%;
+}
+
+
+.textcorot{
+	
+	margin-top:-4%;
+	margin-left:70%;
+	
+}
+.textcorot .hovercorot{
+  visibility: hidden;
+   width: 350px;
+  background-color: rgba(0,0,255,0.2);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  
+  position: absolute;
+  z-index: 1;
+}
+.textcorot:hover .hovercorot {
+  visibility: visible;
+}
+
